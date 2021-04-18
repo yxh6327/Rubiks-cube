@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Rubik's cube </title>
+	<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+	<audio controls="controls" autoplay="autoplay"><source src="lemon.mp3"></audio>
+	<div id="container">
+		<div id="fatherbox">
+			<div class="box" id="box_top"></div>
+			<div class="box" id="box_bottom"></div>
+			<div class="box" id="box_left"></div>
+			<div class="box" id="box_right"></div>
+			<div class="box" id="box_former"></div>
+			<div class="box" id="box_back"></div>
+		</div>
+	</div>
+	<div id="tex1" class="tex">
+		<p>你要做个可爱的姑娘</p>
+	</div>
+	<div id="tex2" class="tex">
+		<p>不烦世事，满心欢喜</p>
+	</div>
+	<div id="tex3" class="tex">
+		<p>永远忠于自己</p>
+	</div>
+	<div id="tex4" class="tex">
+		<p>披星戴月奔向理想和你</p>
+	</div>
+	<div id="tex5" class="tex">
+		<p>一定要站在你所热爱的世界里闪闪发光</p>
+	</div>
+	<script>
+		var arr = document.querySelectorAll(".box");
+		for (var n = 0; n < arr.length; n++ ) {
+			for (var i = 0; i < 8; i++){
+				for (var j = 0; j < 8; j++){
+					var divs = document.createElement("div");
+					divs.style.cssText = "width:50px; height:50px;box-sizing:border-box; position:absolute; background-image: url(image/a"+n+".jpg); background-size: 400px 400px";
+					arr[n].appendChild(divs);
+					divs.style.left = j*50+"PX";
+					divs.style.top = i*50+"PX";
+                    divs.style.backgroundPositionX= -j*50+"PX";
+                    divs.style.backgroundPositionY= -i*50+"PX";
+				}
+			}
+		}
+	</script>
+</body>
+</html>
